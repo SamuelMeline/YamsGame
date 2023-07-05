@@ -7,6 +7,10 @@ router.get('/', (req, res) => {
   res.render('game.twig');
 });
 
+router.post('/results', (req, res) => {
+  res.redirect('/results');
+});
+
 // Page des pâtisseries gagnées
 router.get('/results', (req, res) => {
   Patisserie.find()
