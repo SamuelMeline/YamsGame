@@ -1,12 +1,22 @@
 {% extends 'layout.twig' %}
 
 {% block content %}
-  <div class="results-container">
-    <h1 class="results-title">Résultats du jeu</h1>
-    <ul class="results-patisseries-list">
-      {% for patisserie in patisseries %}
-        <li class="results-patisseries-item">{{ patisserie.name }}</li>
-      {% endfor %}
-    </ul>
-  </div>
+	<div class="results-container">
+		<h1 class="results-title">Résultats du jeu</h1>
+		<p class="results-result">Résultat:
+			{{ result }}</p>
+		{% if patisseries %}
+			<h2>Pâtisseries gagnées :</h2>
+			<ul>
+				{% for patisserie in patisseries %}
+					<li>{{ patisserie.name }}</li>
+				{% endfor %}
+			</ul>
+		{% else %}
+			<p>Aucune pâtisserie gagnée.</p>
+		{% endif %}
+		<form class="retry-form" action="/game" method="get">
+			<button class="retry-button" type="submit">Retenter sa chance</button>
+		</form>
+	</div>
 {% endblock %}

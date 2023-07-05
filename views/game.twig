@@ -3,14 +3,8 @@
 {% block content %}
   <div class="game-container">
     <h1 class="game-title">Bienvenue dans le jeu</h1>
-    <form class="game-form" action="/results" method="post">
+    <form class="game-form" action="/game/play" method="post">
       <button class="game-button" type="submit">Jouer</button>
     </form>
-    <h2 class="game-patisseries-title">Pâtisseries gagnées :</h2>
-    <ul class="game-patisseries-list">
-      {% for patisserie in patisseries %}
-        <li class="game-patisseries-item">{{ patisserie.name }}</li>
-      {% endfor %}
-    </ul>
   </div>
 {% endblock %}
