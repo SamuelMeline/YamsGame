@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Résultats - Game Yams</title>
+  </head>
+  <body>
+    <h1>Résultats - Game Yams</h1>
+    <h2>Pâtisseries gagnées :</h2>
+    <ul>
+      {% for patisserie in patisseries %}
+        <li>{{ patisserie.name }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

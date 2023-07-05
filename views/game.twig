@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game Yams</title>
+  </head>
+  <body>
+    <h1>Jeu Yams</h1>
+    <form action="/" method="POST">
+      <button type="submit">Lancer les dés</button>
+    </form>
+
+    <h2>Pâtisseries gagnées :</h2>
+    <ul>
+      {% for patisserie in patisseries %}
+        <li>{{ patisserie.name }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
