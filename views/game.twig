@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Game Yams</title>
-  </head>
-  <body>
-    <h1>Jeu Yams</h1>
-    <form action="/results" method="POST">
-      <button type="submit">Lancer les dés</button>
-    </form>
+{% extends 'layout.twig' %}
 
-    <h2>Pâtisseries gagnées :</h2>
-    <ul>
+{% block content %}
+  <div class="game-container">
+    <h1 class="game-title">Bienvenue dans le jeu</h1>
+    <form class="game-form" action="/results" method="post">
+      <button class="game-button" type="submit">Jouer</button>
+    </form>
+    <h2 class="game-patisseries-title">Pâtisseries gagnées :</h2>
+    <ul class="game-patisseries-list">
       {% for patisserie in patisseries %}
-        <li>{{ patisserie.name }}</li>
+        <li class="game-patisseries-item">{{ patisserie.name }}</li>
       {% endfor %}
     </ul>
-  </body>
-</html>
+  </div>
+{% endblock %}

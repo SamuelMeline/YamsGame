@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Résultats - Game Yams</title>
-  </head>
-  <body>
-    <h1>Résultats - Game Yams</h1>
-    <h2>Pâtisseries gagnées :</h2>
-    <ul>
+{% extends 'layout.twig' %}
+
+{% block content %}
+  <div class="results-container">
+    <h1 class="results-title">Résultats du jeu</h1>
+    <ul class="results-patisseries-list">
       {% for patisserie in patisseries %}
-        <li>{{ patisserie.name }}</li>
+        <li class="results-patisseries-item">{{ patisserie.name }}</li>
       {% endfor %}
     </ul>
-  </body>
-</html>
+  </div>
+{% endblock %}

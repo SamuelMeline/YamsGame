@@ -1,0 +1,16 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+  <div class="auth-container">
+    <h1 class="auth-title">Inscription</h1>
+    {% if error %}
+      <p class="auth-error">{{ error }}</p>
+    {% endif %}
+    <form class="auth-form" action="/register" method="post">
+      <input class="auth-input" type="text" name="username" placeholder="Nom d'utilisateur" required>
+      <input class="auth-input" type="password" name="password" placeholder="Mot de passe" required>
+      <button class="auth-button" type="submit">S'inscrire</button>
+    </form>
+    <p>Déjà inscrit ? <a href="/login">Connectez-vous ici</a></p>
+  </div>
+{% endblock %}
