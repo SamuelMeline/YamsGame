@@ -6,5 +6,17 @@
     <form class="game-form" action="/game/play" method="post">
       <button class="game-button" type="submit">Jouer</button>
     </form>
+    <div class="patisseries-remaining">
+      <h2>Pâtisseries restantes :</h2>
+      {% if patisseriesRemaining %}
+        <ul>
+          {% for patisserie in patisseriesRemaining %}
+            <li>{{ patisserie.name }} : {{ patisserie.number }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>Toutes les pâtisseries ont été remportées</p>
+      {% endif %}
+    </div>
   </div>
 {% endblock %}

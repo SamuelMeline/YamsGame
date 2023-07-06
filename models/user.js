@@ -10,6 +10,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  patisseries: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Patisserie' }],
+  lastPlayed: {
+    type: Date,
+    default: null},
 });
 
 const User = mongoose.model('User', userSchema);

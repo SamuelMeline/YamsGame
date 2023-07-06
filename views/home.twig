@@ -3,8 +3,48 @@
 {% block content %}
   <div class="home-container">
     <h1 class="home-title">Bienvenue sur mon jeu</h1>
-    <p class="home-content">Tentez de gagner plusieurs patisseries en jouant au yams, que la chance soit avec vous !</p>
-    <a href="/register" class="home-link">Inscription</a>
-    <a href="/login" class="home-link">Connexion</a>
+    <p class="home-content">Tentez de gagner plusieurs pâtisseries en jouant au Yams !</p>
+    <div class="game-info">
+      <h2 class="game-info-title">Comment jouer :</h2>
+      <p class="game-info-text">Lancez les dés et essayez d'obtenir la meilleure combinaison possible.</p>
+      <div class="combination-list">
+        <p class="list-title">Liste des combinaisons :</p>
+        <div class="combination-item">
+          <span class="combination-name">Yams :</span>
+          <span class="combination-description">5 dés identiques</span>
+        </div>
+        <div class="combination-item">
+          <span class="combination-name">Suite :</span>
+          <span class="combination-description">5 dés qui se suivent</span>
+        <div class="combination-item">
+          <span class="combination-name">Carré :</span>
+          <span class="combination-description">4 dés identiques</span>
+        </div>
+        <div class="combination-item">
+          <span class="combination-name">Full :</span>
+          <span class="combination-description">3 dés identiques + 2 dés identiques</span>
+        </div>
+        <div class="combination-item">
+          <span class="combination-name">Brelan :</span>
+          <span class="combination-description">3 dés identiques</span>
+        </div>
+        <div class="combination-item">
+          <span class="combination-name">Deux paires :</span>
+          <span class="combination-description">2 dés identiques + 2 dés identiques</span>
+        </div>
+        <div class="combination-item">
+          <span class="combination-name">Paire :</span>
+          <span class="combination-description">2 dés identiques</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-section">
+      <h2 class="about-title">À propos du jeu :</h2>
+      <p class="about-text">Ce jeu a été créé pour vous divertir et vous permettre de gagner des pâtisseries.</p>
+    </div>
+    <div class="action-buttons">
+      <a href="/register" class="home-link">Inscription</a>
+      <a href="/login" class="home-link">Connexion</a>
+    </div>
   </div>
 {% endblock %}
